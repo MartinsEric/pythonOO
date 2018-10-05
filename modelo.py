@@ -14,6 +14,10 @@ class Filme:
     def nome(self, novo_nome):
         self.__nome = novo_nome.title
 
+    @property
+    def likes(self):
+        return self.__likes
+
     def dar_like(self):
         self.__likes += 1
 
@@ -33,5 +37,23 @@ class Serie:
     def nome(self, novo_nome):
         self.__nome = novo_nome.title
 
+    @property
+    def likes(self):
+        return self.__likes
+
     def dar_like(self):
         self.__likes += 1
+
+
+
+filme = Filme('Vingadores', 2018, 160)
+filme.dar_like()
+
+serie = Serie('Friends', 1994, 10)
+serie.dar_like()
+serie.dar_like()
+serie.dar_like()
+
+
+print(f'Nome: {filme.nome} - Ano: {filme.ano} - Duração: {filme.duracao} - Likes: {filme.likes}')
+print(f'Nome: {serie.nome} - Ano: {serie.ano} - Temporadas: {serie.temporadas} - Likes: {serie.likes}')
