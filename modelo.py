@@ -1,24 +1,24 @@
 class Programa:
 
     def __init__(self, nome, ano):
-        self.nome = nome
+        self._nome = nome
         self.ano = ano
-        self.likes = 0
+        self._likes = 0
 
     @property
     def nome(self):
-        return self.__nome.title()
+        return self._nome.title()
 
     @nome.setter
     def nome(self, novo_nome):
-        self.__nome = novo_nome.title
+        self._nome = novo_nome.title()
 
     @property
     def likes(self):
-        return self.__likes
+        return self._likes
 
     def dar_like(self):
-        self.__likes += 1
+        self._likes += 1
 
 
 class Filme(Programa):
