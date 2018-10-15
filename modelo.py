@@ -75,8 +75,14 @@ the100.dar_like()
 
 sherlock = Serie('Sherlock', 2010, 4)
 
+tlk = Serie('the last kingdom', 2016, 2)
+tlk.dar_like()
+tlk.dar_like()
+tlk.dar_like()
+tlk.dar_like()
 
-filmes_e_series = [vingadores, friends,the100, sherlock]
+
+filmes_e_series = [vingadores, friends,the100, sherlock, tlk]
 
 playlist_fds = Playlist('Playlist de fim de semana', filmes_e_series)
 
