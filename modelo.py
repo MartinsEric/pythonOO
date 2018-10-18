@@ -20,6 +20,7 @@ class Programa:
     def dar_like(self):
         self._likes += 1
 
+
     def __str__(self):
         return f'Nome: {self._nome} - Ano: {self.ano} - {self._likes} likes'
 
@@ -32,6 +33,7 @@ class Filme(Programa):
 
     def __str__(self):
         return f'Nome: {self._nome} - Ano: {self.ano} - {self.duracao} min - {self._likes} likes'
+
 
 
 class Serie(Programa):
@@ -58,32 +60,59 @@ class Playlist:
 
 
 
-vingadores = Filme('Vingadores', 2018, 160)
-vingadores.dar_like()
+#vingadores = Filme('Vingadores', 2018, 160)
+#vingadores.dar_like()
 
-friends = Serie('Friends', 1994, 10)
-friends.dar_like()
-friends.dar_like()
-friends.dar_like()
+# friends = Serie('Friends', 1994, 10)
+# friends.dar_like()
+# friends.dar_like()
+# friends.dar_like()
+#
+# the100 = Serie('The 100', 2013, 5)
+# the100.dar_like()
+# the100.dar_like()
+#
+#
+# sherlock = Serie('Sherlock', 2010, 4)
+#
+# tlk = Serie('the last kingdom', 2016, 2)
+# tlk.dar_like()
+# tlk.dar_like()
+# tlk.dar_like()
+# tlk.dar_like()
+#
+#
+# filmes_e_series = [vingadores, friends,the100, sherlock, tlk]
+#
+#
+# playlist_fds = Playlist('Playlist de fim de semana', filmes_e_series)
+#
+# for programa in playlist_fds:
+#     print(programa)
+lista = []
 
-the100 = Serie('The 100', 2013, 5)
-the100.dar_like()
-the100.dar_like()
+playlist = Playlist('Playlist de fds', lista)
 
+while(True):
 
-sherlock = Serie('Sherlock', 2010, 4)
+    print("********* MENU ********* ")
+    print('1 - Adicionar filme')
+    print('2 - Mostrar lista')
+    print('5 - Sair')
+    opcao = int(input('eslcolha uma opção: '))
 
-tlk = Serie('the last kingdom', 2016, 2)
-tlk.dar_like()
-tlk.dar_like()
-tlk.dar_like()
-tlk.dar_like()
+    if(opcao == 5):
+        break
+    elif(opcao == 1):
 
+        nome = input('Nome do filme: ')
+        ano = input('Ano que foi lançado: ')
+        duracao = input('Duração em minutos: ')
 
-filmes_e_series = [vingadores, friends,the100, sherlock, tlk]
+        filme = Filme(nome, ano, duracao)
 
+        lista.append(filme)
 
-playlist_fds = Playlist('Playlist de fim de semana', filmes_e_series)
-
-for programa in playlist_fds:
-    print(programa)
+    elif(opcao == 2):
+        for programa in playlist:
+            print(programa)
