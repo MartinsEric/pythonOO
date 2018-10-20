@@ -88,3 +88,4 @@ playlist_fds = Playlist('Playlist de fim de semana', filmes_e_series)
 
 for programa in playlist_fds.listagem:
     print(programa)
+
